@@ -16,6 +16,8 @@ And before you ask: **It is not an exploit, cheat, or hack**. It also **does not
 
 > This program assumes your screen is exactly **1920x1080** with 100% UI scaling, and that the game is running in windowed mode on your primary monitor. If your setup differs, you need to either change your monitor's display settings to these, or modify the constants in the source code to your screen's dimensions. In the future, this program may be updated to automatically scale to any screen resolution, but for now, it is hardcoded to these values.
 
+<small>Feel free to showcase AutoBarnaby in your content, or share it around! All I ask is to credit this project.</small>
+
 ---
 
 *Note: The bot is currently powerful enough to reliably get you past stage 100 in a single attempt, however, the current configuration isn't perfect. As an open-source project, if you want to improve it, you are encouraged to tweak the internal constant values to find the perfect configuration and submit a pull request with your improvements. <small>If it wasn't for the 25 ichor cost to test the bot in a real game, this would have already been made perfect!*</small>
