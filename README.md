@@ -24,7 +24,7 @@ And before you ask: **It is not an exploit, cheat, or hack**. It also **does not
 
 ## 🐟 Downloading and Running the Bot
 
-1\. Head over to the [Releases]() page and download the latest `AutoBarnaby.jar` file. No installation is required, just run the `.jar`!
+1\. Head over to the [Releases](https://github.com/HenriqueRadical/auto-barnaby/releases) page and download the latest `AutoBarnaby.jar` file. No installation is required, just run the `.jar`!
 
 > Make sure you have Java installed on your system. You can download it from [here](https://www.java.com/en/download/).
 
