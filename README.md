@@ -12,7 +12,7 @@ AutoBarnaby is the macro bot for you.
 
 Built entirely in Java with zero external dependencies, AutoBarnaby is a lightweight, efficient bot designed to automate the Swimmy Barnaby mini-game.
 
-And before you ask: **It is not an exploit, cheat, or hack**. It also **does not collect any data**, so you can rest assured that you won't get banned, or have your account stolen. To Roblox, this is just a normal program that clicks on your screen.
+And before you ask: **It is not an exploit, cheat, or hack**. It also **does not collect any data**, so you can rest assured that you won't get banned, or have your account stolen. To Roblox, this is just a normal program that clicks on your screen. Additionally, macro-ing is not against Dandy's World or Roblox's rules (as opposed to exploiting).
 
 > This program assumes your screen is exactly **1920x1080** with 100% UI scaling, and that the game is running in windowed mode on your primary monitor. If your setup differs, you need to either change your monitor's display settings to these, or modify the constants in the source code to your screen's dimensions. In the future, this program may be updated to automatically scale to any screen resolution, but for now, it is hardcoded to these values.
 
