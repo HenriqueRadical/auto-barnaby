@@ -14,7 +14,7 @@ Built entirely in Java with zero external dependencies, AutoBarnaby is a lightwe
 
 And before you ask: **It is not an exploit, cheat, or hack**. It also **does not collect any data**, so you can rest assured that you won't get banned, or have your account stolen. To Roblox, this is just a normal program that clicks on your screen. Additionally, macro-ing is not against Dandy's World or Roblox's rules (as opposed to exploiting).
 
-> This program assumes your screen is exactly **1920x1080** with 100% UI scaling, and that the game is running in windowed mode on your primary monitor. If your setup differs, you need to either change your monitor's display settings to these, or modify the constants in the source code to your screen's dimensions. In the future, this program may be updated to automatically scale to any screen resolution, but for now, it is hardcoded to these values.
+> This program assumes your screen is exactly **1920x1080** with 100% UI scaling, and that the game is running on fullscreen on your primary monitor. If your setup differs, you need to either change your monitor's display settings to these, or modify the constants in the source code to your screen's dimensions. In the future, this program may be updated to automatically scale to any screen resolution, but for now, it is hardcoded to these values.
 
 <small>Feel free to showcase AutoBarnaby in your content, or share it around! All I ask is to credit this project.</small>
 
@@ -32,7 +32,7 @@ Alternatively, you can run it by opening a terminal window in the folder contain
 
 2\. Once the terminal is open, simply type `s` to start the bot!
 
-> Start AutoBarnaby **before** you start the game. Then, focus the game window on your primary monitor and press play, keeping your mouse over Roblox. The bot will automatically begin playing.
+> Start AutoBarnaby **before** you start the game. Then, fullscreen the game window on your primary monitor and press play, keeping your mouse over Roblox. The bot will automatically begin playing.
 
 ## 🌿 Building from Source
 
