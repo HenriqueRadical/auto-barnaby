@@ -14,6 +14,8 @@ Built entirely in Java with zero external dependencies, AutoBarnaby is a lightwe
 
 And before you ask: **It is not an exploit, cheat, or hack**. It also **does not collect any data**, so you can rest assured that you won't get banned, or have your account stolen. To Roblox, this is just a normal program that clicks on your screen. Additionally, macro-ing is not against Dandy's World or Roblox's rules (as opposed to exploiting).
 
+AutoBarnaby has been tested to work on Windows, and theoretically should work on MacOS and Linux, but mobile support is not added nor planned.
+
 > This program assumes your screen is exactly **1920x1080** with 100% UI scaling, and that the game is running on fullscreen on your primary monitor. If your setup differs, you need to either change your monitor's display settings to these, or modify the constants in the source code to your screen's dimensions. In the future, this program may be updated to automatically scale to any screen resolution, but for now, it is hardcoded to these values.
 
 <small>Feel free to showcase AutoBarnaby in your content, or share it around! All I ask is to credit this project.</small>
