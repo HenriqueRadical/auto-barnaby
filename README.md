@@ -6,6 +6,8 @@ AutoBarnaby
 <small>An Automatic Swimmy Barnaby Beater</small>
 </h1>
 
+![Release](https://img.shields.io/github/v/release/HenriqueRadical/auto-barnaby) ![Downloads](https://img.shields.io/github/downloads/HenriqueRadical/auto-barnaby/total.svg)
+
 Tired of losing ichor trying to clear 100 stages of Swimmy Barnaby in Dandy's World?
 
 AutoBarnaby is the macro bot for you.
