@@ -26,7 +26,7 @@ Finn must have his default skin equipped for the bot to work, as it is configure
 
 ---
 
-*Note: The bot is currently powerful enough to reliably get you past stage 100 in a single attempt, however, the current configuration isn't perfect. As an open-source project, if you want to improve it, you are encouraged to tweak the internal constant values to find the perfect configuration and submit a pull request with your improvements. <small>If it wasn't for the 25 ichor cost to test the bot in a real game, this would have already been made perfect!*</small>
+*Note: The bot performs well enough to reach stage 100 consistently, though not always on the first attempt. The current configuration is the result of limited practical testing, so there is still room for improvement. If you'd like to help refine it, you're encouraged to experiment with the internal constant values and submit a pull request (or open an issue) with your findings. Any contributions are greatly appreciated. <small>If it wasn't for the 25 ichor cost to test the bot in a real game, this would have already been optimized much further!*</small>
 
 ## 🐟 Downloading and Running the Bot
 
