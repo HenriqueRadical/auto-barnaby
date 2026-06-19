@@ -48,7 +48,7 @@ If you want to modify the code, tune the engine variables, or compile the bot yo
 
 2\. Clone the repository to your local machine:
 ```bash
-git clone https://github.com/HenriqueRadical/AutoBarnaby.git
+git clone https://github.com/HenriqueRadical/auto-barnaby.git
 ```
 3\. Enter the cloned directory and run `compile.bat` (windows) or `compile.sh` (Mac/Linux) to compile the source code into a `.jar` file.
 
@@ -57,9 +57,9 @@ git clone https://github.com/HenriqueRadical/AutoBarnaby.git
 ## ⚠️ Troubleshooting
 
 * **Bot isn't clicking/seeing the fish?** AutoBarnaby is hardcoded to specific screen coordinates. If your monitor resolution or UI scaling is different, you may need to update the `TOP_Y`, `BOTTOM_Y`, `TOP_LEFT_X`, etc., constants at the top of the `AutoBarnaby.java` file to match your screen's exact game board dimensions.
-* **Crashing?** If the program encounters a fatal error, it will generate a `crash_log.txt` file in the same directory. Open this file to see the exact Java stack trace, and feel free to open an issue or submit a pull request with a fix!
+* **Crashing?** If the program encounters a fatal error, it will generate a `crash_log.txt` file in the same directory. Open this file to see the exact Java stack trace, and feel free to open an issue!
 * **Something else?** Open an issue on the GitHub repository and I'll try to help you out.
 
 ## 📜 Credits
 
-A big thank you to [itsmarsss/auto-flappy](https://github.com/itsmarsss/auto-flappy) for the original conceptual inspiration for computer-vision-based gameplay automation. AutoBarnaby builds upon this foundation with completely custom 3D perspective mapping and optimized single-anchor targeting for the Swimmy Barnaby environment.
+A big thank you to [itsmarsss/auto-flappy](https://github.com/itsmarsss/auto-flappy) for the original conceptual inspiration for computer-vision-based gameplay automation. AutoBarnaby builds upon this foundation with completely custom 3D perspective mapping and optimized single-anchor targeting for the Swimmy Barnaby mini-game.
