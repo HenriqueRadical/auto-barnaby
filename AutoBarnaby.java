@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 public class AutoBarnaby {
     // Constants
-    private static final String VERSION = "1.0.0";
+    private static final String VERSION = "1.0.1";
 
     // 1. Boundaries of the tilted game board
     private static final int TOP_Y = 108;
@@ -18,18 +18,21 @@ public class AutoBarnaby {
     private static final int BOTTOM_LEFT_X = 215;
     private static final int BOTTOM_RIGHT_X = 1704; 
 
-    // 2. Barnaby's Colour (RGB)
-    private static final int BARNABY_C_R = 216;
-    private static final int BARNABY_C_G = 111;
-    private static final int BARNABY_C_B = 66;
+    // 2. Barnaby's Colour: rgb(114, 91, 168)
+    private static final int BARNABY_C_R = 114;
+    private static final int BARNABY_C_G = 91;
+    private static final int BARNABY_C_B = 168;
 
     // 3. Engine Tuning
+
+    /** Maximum height that barnaby can be detected (to avoid interpreting the "SCORE" pill as Barnaby) */
+    private static final int MAX_BARNABY_Y = 250;
 
     /** How closely a pixel must match Barnaby's color to be considered him */
     private static final double COLOR_TOLERANCE_PERCENT = 8;
 
-    /** Target line (where we aim) sits 35% of the way down from the ceiling seaweed to the floor seaweed */
-    private static final double TARGET_PERCENT = 0.35;
+    /** Target line (where we aim) sits TARGET_PERCENT% of the way down from the ceiling seaweed to the floor seaweed */
+    private static final double TARGET_PERCENT = 0.52;
 
     /** Minimum wait time between clicks (to prevent going too high) */
     private static final long CLICK_COOLDOWN_MS = 350;
@@ -87,14 +90,12 @@ public class AutoBarnaby {
     }
 
     public void run() {
-        int terminalWidth = calculateTerminalSize();
-        System.out.println("=".repeat(terminalWidth) + "\n" + " ".repeat((terminalWidth - 24) / 2) + "AUTO BARNABY\n" 
-                         + " ".repeat((terminalWidth - 34) / 2) + "Swimmy Barnaby Beater\n" 
+        int terminalWidth = 60; // (Old method of calculating terminal width broke on some computers, so it's now a fixed value)
+        System.out.println("=".repeat(terminalWidth) + "\n" + " ".repeat((terminalWidth) / 3) + "AUTO BARNABY\n" 
+                         + " ".repeat((terminalWidth) / 3) + "Swimmy Barnaby Beater\n" 
                          + "=".repeat(terminalWidth));
         System.out.println("\nVersion " + VERSION);
-        System.out.println("\nBuilding 3D Look-Up Tables...");
         buildLUTs();
-        System.out.println("LUTs Built successfully!");
 
         try {
             commandPrompt();
@@ -102,21 +103,6 @@ public class AutoBarnaby {
             System.out.println("Error: " + e.getMessage());
             e.printStackTrace();
             System.exit(1);
-        }
-    }
-
-    /** Calculates the width of the terminal window, used only for the title */
-    private int calculateTerminalSize() {
-        try {
-            Scanner sc = new Scanner(new ProcessBuilder("cmd", "/c", "mode con").start().getInputStream());
-            int terminalWidth = sc.useDelimiter("\\A").next().lines().filter(line -> line.contains("Columns:")).map(line -> line.replaceAll("\\D+", ""))
-                    .mapToInt(Integer::parseInt)
-                    .findFirst()
-                    .orElse(30);
-            sc.close();
-            return terminalWidth;
-        } catch (Exception e) {
-            return 30; // Default width if detection fails
         }
     }
 
@@ -145,6 +131,11 @@ public class AutoBarnaby {
 
     private void commandPrompt() throws AWTException {
         System.out.println("\nInstructions:");
+        System.out.println("- Make sure Finn has his default skin on (so barnaby is properly detected)"
+        + "\n- Make sure your device is 1920x1080 resolution and that Swimmy Barnaby is on your primary monitor in full-screen mode."
+        + "\n- After starting AutoBarnaby, you can switch to the game window and press play; The program will automatically start playing."
+        + "\n- You do not need to restart AutoBarnaby for each time you hit play; it will keep running in the background until you quit it.");
+        System.out.println("\nControls:");
         System.out.println("- Type 's' to start AutoBarnaby (Do this before pressing play on Swimmy Barnaby).");
         System.out.println("- Type 'q' to quit.");
         
@@ -188,8 +179,8 @@ public class AutoBarnaby {
             int barnabyScreenX = -1;
             int barnabyScreenY = -1;
 
-            // Only scan the left 30% of the screen for Barnaby
-            for (int wy = 0; wy < SCREEN_SIZE; wy += 5) {
+            // Only scan the left 30% of the screen for Barnaby, starting below the MAX_BARNABY_Y limit
+            for (int wy = MAX_BARNABY_Y; wy < SCREEN_SIZE; wy += 5) {
                 for (int wx = 0; wx < 300; wx += 5) {
                     int sx = lutX[wx][wy] - captureX;
                     int sy = lutY[wy] - captureY;
