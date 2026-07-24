@@ -8,7 +8,7 @@ AutoBarnaby
 
 ![Release](https://img.shields.io/github/v/release/HenriqueRadical/auto-barnaby) ![Downloads](https://img.shields.io/github/downloads/HenriqueRadical/auto-barnaby/total.svg)
 
-> This project is currently in <br>hiatus<br/>, following the recent fall in DW's playerbase.
+> This project is currently in <b>hiatus</b>, following the recent fall in DW's playerbase.
 
 Tired of losing ichor trying to clear 100 stages of Swimmy Barnaby in Dandy's World?
 
