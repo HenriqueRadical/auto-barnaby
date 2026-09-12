@@ -201,9 +201,9 @@ public class AutoBarnaby {
 
             // 2. Danger Zone Scanning
             if (barnabyScreenX != -1) {
-                // The Danger Zone starts slightly ahead of Barnaby to ignore foreground obstacles
-                int scanStartScreenX = barnabyScreenX + 20; 
-                int scanEndScreenX = Math.min(SCREEN_SIZE, scanStartScreenX + 320); 
+                // The Danger Zone starts at Barnaby's current X position and extends to scanEndScreenX
+                int scanStartScreenX = barnabyScreenX; 
+                int scanEndScreenX = Math.min(SCREEN_SIZE, scanStartScreenX + 400); // close to the distance between two seaweed pillars (TODO: check)
 
                 int worstTopScreenY = 0;
                 int worstBottomScreenY = SCREEN_SIZE;
